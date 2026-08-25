@@ -78,108 +78,15 @@ ERROR 404/
 └── README.md                   # Project documentation
 ```
 
----
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js**: `v18.0.0` or higher
-- **npm**: `v9.0.0` or higher
-
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/jatinJadoun324/ECHO-.git
-   cd ECHO-
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables** *(Optional for Cloud Persistence)*:  
-   Create a `.env.local` file in the project root:
-   ```env
-   VITE_SUPABASE_URL=https://your-supabase-project.supabase.co
-   VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
-   ```
-
-4. **Start the Development Server**:
-   ```bash
-   npm run dev
-   ```
-   Open your browser at `http://localhost:5173`.
-
----
-
-## 🤖 Running the Live WhatsApp Synchronization Bot
-
-ECHO includes a personal WhatsApp bot powered by `whatsapp-web.js` that continuously streams incoming team chats directly into your local memory engine.
-
-To launch the WhatsApp bot:
-
-```bash
-node scripts/whatsapp-personal-bot.js
-```
-
-1. A **QR Code** will be generated in your terminal.
-2. Scan the QR code using your WhatsApp app (**Linked Devices** > **Link a Device**).
-3. Any new messages received will automatically sync with the ECHO live memory engine every 2.5 seconds via the local Vite middleware (`/api/live-whatsapp`).
-
----
-
-## 🗄️ Supabase Database Setup
-
-To enable cloud vector storage and persistence:
-
-1. Create a new project in [Supabase](https://supabase.com/).
-2. Open the **SQL Editor** in your Supabase Dashboard.
-3. Paste and execute the SQL contents from [`supabase/schema.sql`](file:///Users/kaizen/Downloads/ERROR%20404/supabase/schema.sql).
-
-This sets up:
-- `memories`: Stores context chunks and vector embeddings.
-- `team_members`: Tracks member roles, commitments, and active blockers.
-- `sources`: Stores ingested file metadata.
-- `chat_logs`: Live chat message history.
-
----
-
-## 🌐 Deployment
-
-### Deploying to Cloudflare Pages (Recommended)
-
-This project is pre-configured with a [`public/_redirects`](file:///Users/kaizen/Downloads/ERROR%20404/public/_redirects) file for single-page application (SPA) routing.
-
-#### Option A: Direct CLI Deployment via Wrangler
-```bash
-# Build the project
-npm run build
-
-# Deploy using Wrangler CLI
-npx wrangler pages deploy dist --project-name=echo-memory-engine
-```
-
-#### Option B: GitHub Repository Integration
-1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) > **Workers & Pages** > **Create application** > **Pages**.
-2. Connect to your GitHub repository `jatinJadoun324/ECHO-`.
-3. Set the build parameters:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Build Output Directory**: `dist`
-4. Deploy!
-
----
 
 ## 👥 Team ERROR 404
 
 Developed with ❤️ for **HackSynapse 2026**:
-- **Jatin Jadoun** — *Project Lead & System Architect*
-- **Rahul** — *Backend & Database Lead*
-- **Aman** — *Frontend Lead & UX Developer*
-- **Priya** — *ML Engine & NLP Lead*
+- **Ayushi Shrivastava** — *Project Lead & System Architect*
+- **Jatin Jadoun** — *Technical Lead & UI Developer*
+- **Pallavi Patkar** — *Design and Presentation Lead*
+- **Saksham Upadhyay** — *Research Lead*
 
 ---
 
