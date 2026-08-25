@@ -206,44 +206,6 @@ flowchart TD
 
 ---
 
-## 8. PROJECT STRUCTURE
-
-```text
-ERROR 404/
-├── public/
-│   ├── _redirects              # SPA route rewrite configuration for Cloudflare Pages
-│   ├── favicon.svg             # App favicon
-│   └── icons.svg               # SVG icon sheet
-├── scripts/
-│   ├── whatsapp-personal-bot.js    # Live WhatsApp Web Bot runner (ES Module)
-│   └── whatsapp-personal-bot.cjs   # Live WhatsApp Web Bot runner (CommonJS)
-├── src/
-│   ├── assets/                 # Brand assets and graphics
-│   ├── components/
-│   │   ├── common/             # Badges, Logo, Memory Graph Visualizer, Pitch Bar
-│   │   ├── layout/             # Header, Sidebar, Command Palette
-│   │   ├── modals/             # Upload Modal, WhatsApp Live Modal, Member Drawer
-│   │   └── views/              # Overview, Ask ECHO, Timeline, Sources, Insights, Team, Settings, ProjectBrain
-│   ├── services/
-│   │   ├── embeddingEngine.js  # 384D vector generation & Cosine Similarity search
-│   │   ├── hinglishParser.js   # Hinglish dictionary translator & intent classifier
-│   │   ├── ingestionEngine.js # Multimodal file chunker & processor
-│   │   ├── liveSyncService.js # Live WhatsApp API polling service
-│   │   ├── memoryStore.js     # Seed dataset & memory state definitions
-│   │   ├── ocrEngine.js        # Tesseract.js image OCR & noise cleaning
-│   │   ├── ragEngine.js        # RAG retrieval & answer synthesis pipeline
-│   │   └── supabaseClient.js   # Supabase client initializer
-│   ├── App.jsx                 # Main application view manager & state container
-│   ├── index.css               # Global Tailwind CSS styles
-│   └── main.jsx                # Application entrypoint
-├── supabase/
-│   └── schema.sql              # PostgreSQL tables & vector search RPC functions
-├── vercel.json                 # Vercel SPA rewrite configuration
-├── vite.config.js              # Vite config & custom live API middleware
-├── package.json                # Dependencies and project scripts
-├── .env.example                # Environment variable template
-└── README_HACKATHON.md         # Comprehensive Hackathon README documentation
-```
 
 ### Core Service Files
 
@@ -258,93 +220,8 @@ ERROR 404/
 
 ---
 
-## 9. LOCAL DEVELOPMENT
 
-### Prerequisites
-
-- **Node.js**: `v18.0.0` or higher
-- **npm**: `v9.0.0` or higher
-
-### Setup Instructions
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/jatinJadoun324/ECHO-.git
-   cd ECHO-
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables** *(Optional)*:
-   ```bash
-   cp .env.example .env.local
-   ```
-
-4. **Start the Development Server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` in your browser.
-
-5. **Run Linting**:
-   ```bash
-   npm run lint
-   ```
-
-6. **Run Production Build**:
-   ```bash
-   npm run build
-   ```
-
-### Running the Live WhatsApp Bot (Optional)
-
-To stream live WhatsApp group chat messages into your local dev server:
-
-```bash
-node scripts/whatsapp-personal-bot.js
-```
-Scan the displayed terminal QR code using WhatsApp on your phone (**Linked Devices** > **Link a Device**).
-
----
-
-## 10. ENVIRONMENT VARIABLES
-
-ECHO functions out-of-the-box using in-memory state. To enable persistent cloud vector storage via Supabase, set the following environment variables in `.env.local`:
-
-```env
-# Supabase Cloud Database Credentials (Optional)
-VITE_SUPABASE_URL=https://your-supabase-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
-```
-
----
-
-## 11. DEPLOYMENT
-
-The ECHO web client is deployed and hosted live on **Vercel**:
-
-- 🌐 **Live Application URL**: [https://echo-iota-pink.vercel.app/](https://echo-iota-pink.vercel.app/)
-
-### Vercel Deployment Configuration
-The repository includes a [`vercel.json`](file:///Users/kaizen/Downloads/ERROR%20404/vercel.json) configuration file that handles client-side SPA routing:
-
-```json
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
-```
-
-> **Deployment Note regarding WhatsApp Bot Middleware**:  
-> The live WhatsApp synchronization bot runs as a local Node.js process (`scripts/whatsapp-personal-bot.js`) communicating via local dev server middleware (`/api/live-whatsapp`). On static serverless deployments (such as Vercel), the application falls back gracefully to in-browser OCR, document uploads, and local client memory.
-
----
-
-## 12. LIMITATIONS & FUTURE IMPROVEMENTS
+## 8. LIMITATIONS & FUTURE IMPROVEMENTS
 
 To maintain technical transparency for hackathon evaluation, the current MVP limitations and planned production improvements are outlined below:
 
@@ -363,7 +240,7 @@ To maintain technical transparency for hackathon evaluation, the current MVP lim
 
 ---
 
-## 13. TEAM
+## 9. TEAM
 
 # 👥 Team ERROR 404
 
@@ -374,7 +251,7 @@ To maintain technical transparency for hackathon evaluation, the current MVP lim
 
 ---
 
-## 14. HACKSYNAPSE 2026
+## 10. HACKSYNAPSE 2026
 
 Built for **HackSynapse 2026**.
 
@@ -384,6 +261,6 @@ Built for **HackSynapse 2026**.
 
 ---
 
-## 15. LICENSE
+## 11. LICENSE
 
 This repository currently does not contain an explicit open-source license file. All rights reserved by **Team ERROR 404**.
