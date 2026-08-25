@@ -367,10 +367,10 @@ To maintain technical transparency for hackathon evaluation, the current MVP lim
 
 # 👥 Team ERROR 404
 
-- **Ayushi Shrivastava** — *Project Lead & System Architect* [[GitHub / LinkedIn]]
-- **Jatin Jadoun** — *Technical Lead & UI Developer* [[GitHub / LinkedIn]]
-- **Pallavi Patkar** — *Design & Presentation Lead* [[GitHub / LinkedIn]]
-- **Saksham Upadhyay** — *Research Lead* [[GitHub / LinkedIn]]
+- **Ayushi Shrivastava** — *Project Lead* 
+- **Jatin Jadoun** — *Technical Lead & UI Developer* 
+- **Pallavi Patkar** — *Design & Presentation Lead* 
+- **Saksham Upadhyay** — *Research Lead* 
 
 ---
 
