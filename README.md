@@ -9,9 +9,8 @@ ECHO is an AI-powered team memory and context retrieval system designed to elimi
 ### 🚀 Submission Links
 
 - **🚀 Live Demo**: [https://echo-iota-pink.vercel.app/](https://echo-iota-pink.vercel.app/)
-- **🎥 Demo / Pitch Video**: [ADD VIDEO URL HERE]
-- **📑 Presentation**: `./docs/presentation.pdf`
-- **💻 Original Development Repository**: [https://github.com/jatinJadoun324/ECHO-](https://github.com/jatinJadoun324/ECHO-)
+- **🎥 Demo / Pitch Video**: (https://drive.google.com/file/d/1-A3PpQFR-vErfrZPfBicwg1s53RJl-Gu/view?usp=drive_link)
+- **📑 Presentation**: (https://drive.google.com/file/d/1TKJUWXcGdI-6H7S-YN3MM2pASbLUsQN0/view?usp=sharing)
 - **🏆 HackIndia Submission Repository**: [https://github.com/HackIndiaXYZ/hack-synapse-2026-mits-du-gwalior-madhya-pradesh-error-404](https://github.com/HackIndiaXYZ/hack-synapse-2026-mits-du-gwalior-madhya-pradesh-error-404)
 
 ---
