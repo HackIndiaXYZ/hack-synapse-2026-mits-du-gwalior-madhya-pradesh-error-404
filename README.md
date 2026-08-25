@@ -45,37 +45,6 @@ $$\text{Capture} \longrightarrow \text{Process} \longrightarrow \text{Represent}
 
 It allows any team member to query the project's history in plain English or **Hinglish** (Romanized Hindi) and receive synthesized answers supported by direct conversational evidence.
 
-```mermaid
-flowchart LR
-    subgraph Data Sources
-        A1[Chat Logs & Files]
-        A2[WhatsApp Screenshots]
-        A3[Live WhatsApp Stream]
-    end
-
-    subgraph Processing Pipeline
-        B1[Tesseract OCR Engine]
-        B2[Hinglish NLP Parser]
-        B3[Semantic Vector Chunker]
-    end
-
-    subgraph Memory Engine
-        C1[(In-Memory Vector Store)]
-        C2[(Optional Supabase Store)]
-    end
-
-    subgraph Retrieval & Insight
-        D1[Cosine Similarity Engine]
-        D2[RAG Answer Synthesizer]
-        D3[Project Health & Risk Detector]
-    end
-
-    A1 --> B3
-    A2 --> B1 --> B2 --> B3
-    A3 --> B2 --> B3
-    B3 --> C1 & C2
-    C1 & C2 --> D1 --> D2 --> D3
-```
 
 ---
 
@@ -112,22 +81,7 @@ Grounded Answer + Evidence Cards + Risk Insights
 3. **Deterministic Vector Representation**:
    - Chunks are vectorized into 384-dimensional normalized vectors with domain concept boosts for key terms (`auth`, `backend`, `deadline`, `frontend`).
 
-### Implementation Breakdown
 
-- **Genuinely Implemented in Code**:
-  - In-browser 384D vector embedding & Cosine Similarity search engine (`src/services/embeddingEngine.js`).
-  - RAG answer synthesis and evidence extraction engine (`src/services/ragEngine.js`).
-  - Rule-based Hinglish NLP intent parser (`src/services/hinglishParser.js`).
-  - Client-side Tesseract.js image OCR with noise cleaning (`src/services/ocrEngine.js`).
-  - Live WhatsApp Web bot script (`scripts/whatsapp-personal-bot.js`) + local Vite middleware endpoint (`/api/live-whatsapp`).
-  - Interactive SVG/Canvas 2D Memory Graph Visualizer (`src/components/common/MemoryGraphVisualizer.jsx`).
-  - Optional Supabase integration for persistent cloud storage (`src/services/supabaseClient.js`).
-- **Demo / Mock Data**:
-  - Initial seed memory store (`src/services/memoryStore.js`) pre-populated with realistic team chat histories (Rahul, Aman, Priya, Jatin) to demonstrate project health risks out of the box.
-- **Optional Integrations**:
-  - Cloud Supabase persistence (activates automatically when `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` are provided).
-
----
 
 ## 4. KEY FEATURES
 
